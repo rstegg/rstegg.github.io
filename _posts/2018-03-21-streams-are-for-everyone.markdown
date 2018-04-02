@@ -5,8 +5,6 @@ categories: [javascript, streams]
 tags: [javascript, code, streams]
 ---
 
-## Streams are for everyone
-
 I have been fiddling with reactive programming for a while, mostly with RxJS, and I simply love the tools.
 
 If you don't know what an observable is, it's basically a `Promise`-style wrapper in which events can be composed.  In other words, you can map over the output of functions that would otherwise use callbacks.

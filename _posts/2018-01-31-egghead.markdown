@@ -5,8 +5,6 @@ categories: [review]
 tags: [egghead, courses, review]
 ---
 
-## Egghead courses review: React, reactive programming & open source
-
 Most courses are good but very basic. They are very good to get to know a new technology. Only the Redux course I can recommend to any developer: no matter if you just starting with Redux, already fluent or not going to use it at all.
 
 Some courses are free but most of them are available only by subscription. With a subscription you have access to all Egghead’s courses and a few useful features: adjusting playback speed, skip 25 seconds button, downloading HD videos. In the past they had a $20 monthly subscription but now they have only $200 yearly. And I can’t recommend it anymore: one month is enough to watch most of the good courses.
