@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Writing React and Redux Applications: A Detailed Look Into Structuring Projects</title>
+  <meta name="description" content="There is no One True Project Structure when it comes to Redux. With this in mind, I’ll explain what has worked for me.
+
+">
+  <meta name="author" content="Ryan Stegmann">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Writing React and Redux Applications: A Detailed Look Into Structuring Projects">
+  <meta name="twitter:description" content="There is no One True Project Structure when it comes to Redux. With this in mind, I’ll explain what has worked for me.
+
+">
+  
+  <meta name="twitter:creator" content="rstegd">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Writing React and Redux Applications: A Detailed Look Into Structuring Projects">
+  <meta property="og:description" content="There is no One True Project Structure when it comes to Redux. With this in mind, I’ll explain what has worked for me.
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1522647988824356000">
+  <link rel="canonical" href="http://rsteg.com/2017/react-structure/">
+  <link rel="alternate" type="application/rss+xml" title="rsteg" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of rsteg">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">rsteg</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Ryan Stegmann - mobile and web developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to rsteg blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/rstegd" title="@rstegd on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/rstegg" title="rstegg on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/rsteg" title="rsteg on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rstegg" title="rstegg on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:stegmannrd@gmail.com" title="Email stegmannrd@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="11 Dec 2017" class="post-meta__date date">11 Dec 2017</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> <a href="/tags/#code">code</a> <a href="/tags/#structure">structure</a> </span>
+      
+    </div>
+    <h1 class="post-title">Writing React and Redux Applications: A Detailed Look Into Structuring Projects</h1>
+  </header>
+
+  <section class="post">
+    <p>There is no <em>One True Project Structure</em> when it comes to Redux. With this in mind, I’ll explain what has worked for me.</p>
+
+<h2 id="general-structure">General structure</h2>
+
+<p>There are two approaches for grouping files:</p>
+
+<ul>
+  <li>By concept: one directory for components, reducers, actions, and so on.</li>
+  <li>By page: all files related to one page are inside the same directory.</li>
+</ul>
+
+<p>Initially I started off with grouping by concept.</p>
+
+<p>Grouping by concept works for small applications, but in order to add new pages, you have to make note of many files: <code class="highlighter-rouge">reducers/MyPage.js</code>, <code class="highlighter-rouge">selectors/MyPage.js</code>, <code class="highlighter-rouge">components/MyPage.js</code> and a few more, depending on the technologies used. This makes scaling difficult, and training additional developers for the project can deem tricky.</p>
+
+<p>Since that didn’t work, I tried grouping files by view or page: <code class="highlighter-rouge">dashboard</code>, <code class="highlighter-rouge">users</code>, etc.</p>
+
+<p>Here are main directories I have in my application:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">app</code>: Redux store configuration and root reducer, React Router routes, application root components with connections to Redux, Redux DevTools, React Router, and other stack-specific tooling.</li>
+  <li><code class="highlighter-rouge">components</code>: shared components.</li>
+  <li><code class="highlighter-rouge">util</code>: generic functions.</li>
+  <li><code class="highlighter-rouge">pages</code>: features (could also be named <code class="highlighter-rouge">views</code>).</li>
+</ul>
+
+<p><code class="highlighter-rouge">pages</code> directories look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pages/
+  page-name/
+    components/
+      PageNameView.jsx
+      PageNameLayout.jsx
+      <span class="k">*</span>.jsx
+    duck.js
+  very-big-page/
+    page1/
+    page2/
+</code></pre></div></div>
+
+<ul>
+  <li>I follow <a href="https://github.com/erikras/ducks-modular-redux">the Ducks convention</a> so instead of separate files for actions, reducers and constants there are single <code class="highlighter-rouge">duck</code> file. I also put Reselect selectors into the duck file as <code class="highlighter-rouge">selector</code> named export.</li>
+  <li>The <code class="highlighter-rouge">components</code> directory contains all React components that are unique to this view.</li>
+  <li><code class="highlighter-rouge">PageNameView</code> is connected to Redux and contains all action calls. Nested components receive handlers as props and don’t know anything about Redux. All page layout goes to <code class="highlighter-rouge">PageNameLayout</code> component.</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<p>For simple applications I like the simplest structure:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>page-one/
+  Component1.js
+  Component2.js
+  Component2.css
+</code></pre></div></div>
+
+<p>It works fine until you add more styles and other non-JavaScript files to your components. In this case I’d put every component into a separate directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>page-one/
+  Component1
+    index.js
+    Component1.js
+    Component1.css
+    Component1.spec.js
+</code></pre></div></div>
+
+<p>File names are still contain component class names so you can open them using a fuzzy search in your editor. I also have an extra entry file in every component directory, <code class="highlighter-rouge">index.js</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'./Component1'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>It allows you to import components like this: <code class="highlighter-rouge">components/Component1</code> instead of <code class="highlighter-rouge">components/Component1/Component1</code>.</p>
+
+<h2 id="ducks-and-selectors">Ducks and selectors</h2>
+
+<p>Each page has its own duck file <code class="highlighter-rouge">duck.js</code> structured as follows:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'redux'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">createStructuredSelector</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'reselect'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">DO_SOMETHING_COOL</span> <span class="o">=</span> <span class="s1">'myapp/page-name/DO_SOMETHING_COOL'</span><span class="p">;</span>
+
+<span class="c1">// Actions</span>
+
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">doSomethingCool</span><span class="p">(</span><span class="nx">what</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">type</span><span class="p">:</span> <span class="nx">DO_SOMETHING_COOL</span>
+    <span class="c1">// ...</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// Reducers</span>
+
+<span class="kd">function</span> <span class="nx">cookiesReducer</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">DO_SOMETHING_COOL</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">{</span>
+        <span class="cm">/*_*/</span>
+      <span class="p">};</span>
+    <span class="nl">default</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">{</span>
+        <span class="cm">/*_*/</span>
+      <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">combineReducers</span><span class="p">({</span>
+  <span class="na">cookies</span><span class="p">:</span> <span class="nx">cookiesReducer</span>
+  <span class="c1">// ...</span>
+<span class="p">});</span>
+
+<span class="c1">// Selectors</span>
+
+<span class="kd">const</span> <span class="nx">isFetching</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">isFetching</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">cookies</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">cookies</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">selector</span> <span class="o">=</span> <span class="nx">createStructuredSelector</span><span class="p">({</span>
+  <span class="nx">isFetching</span><span class="p">,</span>
+  <span class="nx">cookies</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Then import it at the root reducer, <code class="highlighter-rouge">app/reducers.js</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'redux'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">pageName</span> <span class="k">from</span> <span class="s1">'../pages/page-name/duck'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">combineReducers</span><span class="p">({</span>
+  <span class="nx">pageName</span>
+  <span class="c1">// ...</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>I use selectors as the only way to access Redux state in components. So I connect selectors and actions to page’s root component, <code class="highlighter-rouge">PageNameView.jsx</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">PropTypes</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">bindActionCreators</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'redux'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-redux'</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">duck</span> <span class="k">from</span> <span class="s1">'../duck'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PageNameLayout</span> <span class="k">from</span> <span class="s1">'./PageNameLayout'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">connect</span><span class="p">(</span>
+  <span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">duck</span><span class="p">.</span><span class="nx">selector</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">pageName</span><span class="p">),</span>
+  <span class="nx">dispatch</span> <span class="o">=&gt;</span> <span class="p">({</span>
+    <span class="na">actions</span><span class="p">:</span> <span class="nx">bindActionCreators</span><span class="p">(</span><span class="nx">duck</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">)</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">PageNameView</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="cm">/*
+  Here you have:
+  - this.props.actions.doSomethingCool
+  - this.props.isFetching
+  - this.props.cookies
+  */</span>
+
+  <span class="nx">handleSomethingCool</span><span class="p">(</span><span class="nx">what</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">actions</span><span class="p">.</span><span class="nx">doSomethingCool</span><span class="p">(</span><span class="nx">what</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">isFetching</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">isFetching</span> <span class="p">?</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>        <span class="p">)</span> <span class="p">:</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">PageNameLayout</span>
+            <span class="p">{...</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">}</span>
+            <span class="nx">onSomethingCool</span><span class="o">=</span><span class="p">{</span><span class="nx">what</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleSomethingCool</span><span class="p">(</span><span class="nx">what</span><span class="p">)}</span>
+          <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="p">)}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="development-and-production-versions">Development and production versions</h2>
+
+<p>In a few places I have separate files for development and production builds: <code class="highlighter-rouge">containers/Root</code> and <code class="highlighter-rouge">store/configureStore</code>, for example. I think they are easier to use then a single file with a bunch of <code class="highlighter-rouge">if</code>s.</p>
+
+<p>For example, <code class="highlighter-rouge">configureStore.development.js</code> and <code class="highlighter-rouge">configureStore.production.js</code> are completely independent modules and <code class="highlighter-rouge">configureStore.js</code> chooses which one to use:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="s1">'production'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./configureStore.production'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./configureStore.development'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>It allows you to do <code class="highlighter-rouge">import configureStore from './store/configureStore</code> and have the right version of the module depending on the current environment.</p>
+
+<h2 id="other-approaches">Other approaches</h2>
+
+<ul>
+  <li><a href="https://survivejs.com/webpack_react/structuring_react_projects/">Structuring React Projects</a>, a chapter from SurviveJS book.</li>
+  <li><a href="http://engineering.kapost.com/2016/01/organizing-large-react-applications/">Organizing Large React Applications</a></li>
+  <li><a href="https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1#.sbykc54ta">How to better organize your React applications</a></li>
+</ul>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2018 Ryan Stegmann. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1522647988824356000"></script>
+
+
+    </div>
+  </body>
+</html>

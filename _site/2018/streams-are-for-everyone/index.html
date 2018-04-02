@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Streams are for everyone</title>
+  <meta name="description" content="Streams are for everyone
+
+">
+  <meta name="author" content="Ryan Stegmann">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Streams are for everyone">
+  <meta name="twitter:description" content="Streams are for everyone
+
+">
+  
+  <meta name="twitter:creator" content="rstegd">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Streams are for everyone">
+  <meta property="og:description" content="Streams are for everyone
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1522647988824356000">
+  <link rel="canonical" href="http://rsteg.com/2018/streams-are-for-everyone/">
+  <link rel="alternate" type="application/rss+xml" title="rsteg" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of rsteg">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">rsteg</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Ryan Stegmann - mobile and web developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to rsteg blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/rstegd" title="@rstegd on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/rstegg" title="rstegg on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/rsteg" title="rsteg on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rstegg" title="rstegg on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:stegmannrd@gmail.com" title="Email stegmannrd@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="11 Feb 2018" class="post-meta__date date">11 Feb 2018</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> <a href="/tags/#code">code</a> <a href="/tags/#streams">streams</a> </span>
+      
+    </div>
+    <h1 class="post-title">Streams are for everyone</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="streams-are-for-everyone">Streams are for everyone</h2>
+
+<p>I have been fiddling with reactive programming for a while, mostly with RxJS, and I simply love the tools.</p>
+
+<p>If you don’t know what an observable is, it’s basically a <code class="highlighter-rouge">Promise</code>-style wrapper in which events can be composed.  In other words, you can map over the output of functions that would otherwise use callbacks.</p>
+
+<p>This is an example of an event emitter for tracking a user’s status:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createOnlineEmitter</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">cbs</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">//array of registered callbacks for the event</span>
+  <span class="kd">let</span> <span class="nx">unsub</span><span class="p">;</span> <span class="c1">//function for removing the main event listener</span>
+
+  <span class="c1">//this is the main event listener that gets registered with window.online/offline event</span>
+  <span class="kd">const</span> <span class="nx">mainListener</span> <span class="o">=</span> <span class="p">(</span><span class="nx">isOnline</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//call all the subscribed callbacks</span>
+    <span class="nx">cbs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">cb</span> <span class="o">=&gt;</span> <span class="nx">cb</span><span class="p">(</span><span class="nx">isOnline</span><span class="p">));</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">registerMainListener</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">boundOnline</span> <span class="o">=</span> <span class="nx">mainListener</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">boundOffline</span> <span class="o">=</span> <span class="nx">mainListener</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'online'</span><span class="p">,</span> <span class="nx">boundOnline</span><span class="p">);</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'offline'</span><span class="p">,</span> <span class="nx">boundOffline</span><span class="p">);</span>
+    <span class="c1">//return unsubcribe functionality in a closure</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="nx">unsubscribe</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'online'</span><span class="p">,</span> <span class="nx">boundOnline</span><span class="p">);</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'offline'</span><span class="p">,</span> <span class="nx">boundOffline</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">addCb</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">cbs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">cb</span><span class="p">);</span>
+    <span class="c1">//register main listener only once</span>
+    <span class="c1">//use existence of `unsub` as indicator if main event listener is added or not</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">unsub</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">unsub</span> <span class="o">=</span> <span class="nx">registerMainListener</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">removeCb</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">cbs</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">cb</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">index</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cbs</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//if no callbacks left, remove main event listener</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">cbs</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">unsub</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">unsub</span><span class="p">();</span>
+      <span class="nx">unsub</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="kd">function</span> <span class="nx">initOnlineEmitter</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">addCb</span><span class="p">(</span><span class="nx">cb</span><span class="p">);</span>
+    <span class="c1">//call it async with the initial val</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">cb</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">onLine</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="c1">//return unsubscribe function to caller</span>
+    <span class="k">return</span> <span class="nx">removeCb</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// implement it</span>
+<span class="kd">const</span> <span class="nx">onlineEmitter</span> <span class="o">=</span> <span class="nx">createOnlineEmitter</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">unsub</span> <span class="o">=</span> <span class="nx">onlineEmitter</span><span class="p">(</span><span class="nx">isOnline</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isOnline</span><span class="p">));</span>
+<span class="nx">unsub</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Not too bad, but this is what the implementation would look like with observables:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'rxjs/Observable'</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'rxjs/add/observable/fromEvent'</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'rxjs/add/operator/map'</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'rxjs/add/observable/merge'</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">createOnline$</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//merge several events into one</span>
+  <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">merge</span><span class="p">(</span>
+    <span class="c1">//use .map() to transform the returned Event type into a true/false value</span>
+  	<span class="nx">Observable</span><span class="p">.</span><span class="nx">fromEvent</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s1">'offline'</span><span class="p">).</span><span class="nx">map</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">),</span>
+  	<span class="nx">Observable</span><span class="p">.</span><span class="nx">fromEvent</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s1">'online'</span><span class="p">).</span><span class="nx">map</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">),</span>
+    <span class="c1">//start the stream with the current online status</span>
+  	<span class="nx">Observable</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">sub</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  		<span class="nx">sub</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">onLine</span><span class="p">);</span>
+  		<span class="nx">sub</span><span class="p">.</span><span class="nx">complete</span><span class="p">();</span> <span class="c1">//this one only emits once, so now we end it</span>
+  	<span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// implement it</span>
+<span class="kd">const</span> <span class="nx">onlineSub</span> <span class="o">=</span> <span class="nx">createOnline$</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">isOnline</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isOnline</span><span class="p">));</span>
+<span class="nx">onlineSub</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Simple example. Observables are awesome tools.</p>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2018 Ryan Stegmann. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1522647988824356000"></script>
+
+
+    </div>
+  </body>
+</html>

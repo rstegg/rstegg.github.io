@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Which JavaScript code styles are most popular</title>
+  <meta name="description" content="There are two big holy war questions about code style in JavaScript: tabs vs. spaces and semicolons vs. no semicolons. Of course there are more, like where to put a comma in a multiline array declaration, but these two are causing the most casualties.
+
+">
+  <meta name="author" content="Ryan Stegmann">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Which JavaScript code styles are most popular">
+  <meta name="twitter:description" content="There are two big holy war questions about code style in JavaScript: tabs vs. spaces and semicolons vs. no semicolons. Of course there are more, like where to put a comma in a multiline array declaration, but these two are causing the most casualties.
+
+">
+  
+  <meta name="twitter:creator" content="rstegd">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Which JavaScript code styles are most popular">
+  <meta property="og:description" content="There are two big holy war questions about code style in JavaScript: tabs vs. spaces and semicolons vs. no semicolons. Of course there are more, like where to put a comma in a multiline array declaration, but these two are causing the most casualties.
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1522647988824356000">
+  <link rel="canonical" href="http://rsteg.com/2018/javascript-styles/">
+  <link rel="alternate" type="application/rss+xml" title="rsteg" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of rsteg">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">rsteg</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Ryan Stegmann - mobile and web developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to rsteg blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/rstegd" title="@rstegd on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/rstegg" title="rstegg on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/rsteg" title="rsteg on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rstegg" title="rstegg on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:stegmannrd@gmail.com" title="Email stegmannrd@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="11 Feb 2018" class="post-meta__date date">11 Feb 2018</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> <a href="/tags/#code">code</a> <a href="/tags/#style">style</a> </span>
+      
+    </div>
+    <h1 class="post-title">Which JavaScript code styles are most popular</h1>
+  </header>
+
+  <section class="post">
+    <p>There are two big holy war questions about code style in JavaScript: tabs vs. spaces and semicolons vs. no semicolons. Of course there are more, like where to put a comma in a multiline array declaration, but these two are causing the most casualties.</p>
+
+<p>I was wondering if it’s worth our time. Can we all just adopt the most popular style if there is one, and stop arguing? So I’ve analyzed <a href="https://www.npmjs.com/browse/depended">100 most depended-upon</a> npm packages and ran a survey with the same questions that ended up with 1169 respondents.</p>
+
+<h3 id="tabs-or-spaces">Tabs or spaces?</h3>
+
+<p><img src="/images/javascript-indent.svg" alt="" /></p>
+
+<ul>
+  <li>Two-space indentation is a clear winner, especially for open source projects.</li>
+  <li>Some developers don’t really know what they use. Here’s my favorite answer: “I just press tab and the editor formats it to something else I don’t even know”.</li>
+</ul>
+
+<h3 id="semicolons-or-no-semicolons">Semicolons or no semicolons?</h3>
+
+<p><img src="/images/javascript-semi.svg" alt="" /></p>
+
+<ul>
+  <li>Majority of developers write JavaScript with semicolons.</li>
+</ul>
+
+<h3 id="linter-presets">Linter presets</h3>
+
+<p><img src="/images/javascript-presets.svg" alt="" /></p>
+
+<ul>
+  <li>Most open source projects do not use any linter presets.</li>
+  <li>Many projects have no code style linting at all.</li>
+  <li>Huge projects with many packages use their own presets: Babel, Gulp, PostCSS, Facebook.</li>
+  <li>I’ve included eslint:recommended (ESLint) because it’s relatively popular but it has no code style rules.</li>
+</ul>
+
+<h4 id="survey-results">Survey results:</h4>
+
+<ul>
+  <li>Results are almost the opposite.</li>
+  <li>AirBnb is the most popular preset.</li>
+  <li>Standard is popular too (looks like all developers who don’t use semicolons use Standard).</li>
+  <li>Which makes some developers quite angry: “Definitely not that ‘standard’ BS”.</li>
+</ul>
+
+<h3 id="linters">Linters</h3>
+
+<p><img src="/images/javascript-linters.svg" alt="" /></p>
+
+<ul>
+  <li>Many open source projects have very basic linting: not more than 10 rules.</li>
+  <li>Some projects have .eslintrc or .jshintrc but do not run linter as a part of tests.</li>
+  <li>Some projects have both .eslintrc and .jshintrc, some even with conflicting rules.</li>
+  <li>
+    <p>Survey results:</p>
+  </li>
+  <li>Prettier was released just a few weeks ago but already adopted by quite a few people.</li>
+  <li>And has made some people super excited: “Waiting for Prettier to gain more traction!” or “Will use Prettier once major bugs have been fixed”.</li>
+  <li>Some developers don’t really care: “Code style doesn’t matter”.</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>I was expecting to see numbers closer to 50% for the first two questions. But I was surprised by actual popularity of spaces for indentation in JavaScript: tabs are almost non-existent. Same for semicolons: not as many people aren’t using them as you can imagine reading Twitter.</p>
+
+<p>The results show less diversity in code style of popular open source projects: more than half use 2 spaces with semicolons. Many still don’t use any tooling to validate code style.</p>
+
+<p>It could also be because many popular open source projects are old but in the survey people described what they used on their latest project.</p>
+
+<p>So if you’re starting a new JavaScript project <a href="https://github.com/airbnb/javascript">AirBnb preset</a> (2 spaces, semicolons, etc.) will be a good choice: your code style will be familiar for many developers.</p>
+
+<p>Note: two projects of 100 are written in CoffeeScript, and one with only native code. These were excluded from the results.</p>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2018 Ryan Stegmann. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1522647988824356000"></script>
+
+
+    </div>
+  </body>
+</html>
