@@ -1,120 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-    
-    <url>
-      <loc>http://rsteg.com/2018/streams-are-for-everyone/</loc>
-      
-        <lastmod>2018-02-11T02:10:55-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/2018/javascript-styles/</loc>
-      
-        <lastmod>2018-02-11T02:10:55-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/2018/egghead/</loc>
-      
-        <lastmod>2018-01-31T04:15:03-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/2017/react-structure/</loc>
-      
-        <lastmod>2017-12-11T01:04:23-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/2017/world-hello/</loc>
-      
-        <lastmod>2017-02-01T03:25:05-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-  
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/feed.xml</loc>
-      
-        <lastmod>2018-04-01T22:46:28-07:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-  
-    
-    <url>
-      <loc>http://rsteg.com/css/main.css</loc>
-      
-        <lastmod>2018-04-01T22:46:28-07:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-  
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://www.rsteg.com/world-hello/</loc>
+<lastmod>2017-02-01T03:25:05-08:00</lastmod>
+</url>
+<url>
+<loc>https://www.rsteg.com/react-structure/</loc>
+<lastmod>2017-12-11T01:04:23-08:00</lastmod>
+</url>
+<url>
+<loc>https://www.rsteg.com/egghead/</loc>
+<lastmod>2018-01-31T04:15:03-08:00</lastmod>
+</url>
+<url>
+<loc>https://www.rsteg.com/javascript-styles/</loc>
+<lastmod>2018-02-11T02:10:55-08:00</lastmod>
+</url>
+<url>
+<loc>https://www.rsteg.com/streams-are-for-everyone/</loc>
+<lastmod>2018-02-11T02:10:55-08:00</lastmod>
+</url>
+<url>
+<loc>https://www.rsteg.com/</loc>
+</url>
+<url>
+<loc>https://www.rsteg.com/tags/</loc>
+</url>
+<url>
+<loc>https://www.rsteg.com/admin/</loc>
+<lastmod>2018-04-01T23:13:46-07:00</lastmod>
+</url>
 </urlset>

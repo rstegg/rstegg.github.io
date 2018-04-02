@@ -1,7 +1,8 @@
 ---
-title:  "Writing React and Redux Applications: A Detailed Look Into Structuring Projects"
-date:   2017-12-11 09:04:23
-categories: [javascript]
+layout: post
+title: "Writing React and Redux Applications: A Detailed Look Into Structuring Projects"
+date: 2017-12-11 09:04:23
+description: Looking for the best ways to structure React and Redux applications.
 tags: [javascript, code, structure]
 ---
 

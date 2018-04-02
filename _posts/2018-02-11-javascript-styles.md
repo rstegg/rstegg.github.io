@@ -1,7 +1,8 @@
 ---
-title:  "Which JavaScript code styles are most popular"
-date:   2018-02-11 10:10:55
-categories: [javascript]
+layout: post
+title: "Which JavaScript code styles are most popular"
+date: 2018-02-11 10:10:55
+description: A comparison between the most popular styles of writing JavaScript.
 tags: [javascript, code, style]
 ---
 

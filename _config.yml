@@ -1,43 +1,37 @@
-# Site settings
-title: rsteg
-description: 'Ryan Stegmann - mobile and web developer'
-url: 'http://rsteg.com'
-baseurl: ''
-# google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
+title: Hello, world! I'm Ryan Stegmann
+description: > # this means to ignore newlines until "baseurl:"
+  My name is Ryan. I’m a JavaScript freelance developer,
+  coffee drinker and huge nerd living in
+  Riverside, California.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.rsteg.com" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-author:
-  name: 'Ryan Stegmann'
-  email: stegmannrd@gmail.com
-  twitter_username: rstegd
-  facebook_username: rstegg
-  github_username:  rstegg
-  linkedin_username:  rsteg
+# Author Settings
+author: Ryan Stegmann # add your name
+author-img: ryan-stegmann.png # add your photo
+about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+social-twitter: rstegd # add your Twitter handle
+social-facebook: rstegg # add your Facebook handle
+social-github: rstegg # add your Github handle
+social-linkedin: rsteg # add your Linkedin handle
+social-email: stegmannrd@gmail.com # add your Email address
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+# Disqus
+discus-identifier: rsteg # add your discus identifier
 
-# Build settings
-destination: _site
-paginate: 10
-permalink: /:year/:title/
+# Tracker
+analytics: UA-96677476-1 # Google Analytics
+
+# Build Settings
 markdown: kramdown
-highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-sass:
-    sass_dir: _sass
-    style: compressed
+paginate: 8
+paginate_path: "/page/:num"
 
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
-
-plugins: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]

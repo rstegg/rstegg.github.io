@@ -1,7 +1,8 @@
 ---
-title:  "Streams are for everyone"
-date:   2018-02-11 10:10:55
-categories: [javascript, streams]
+layout: post
+title: "Streams are for everyone"
+date: 2018-02-11 10:10:55
+description: Writings on reactive programming.
 tags: [javascript, code, streams]
 ---
 
