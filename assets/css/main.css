@@ -874,7 +874,6 @@ table tfoot td {
 
 .post, .article-page {
   background-color: #fff;
-  width: 100%;
 }
 
 ::-moz-selection {
@@ -1379,6 +1378,9 @@ a.newer-posts:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+  }
+  .article-page {
+    width: 100%;
   }
   .sidebar footer {
     margin-bottom: 10px;
