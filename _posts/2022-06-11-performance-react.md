@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Enhancing Performance in React Applications"
-date: 2024-11-15 11:25:32
+date: 2022-06-11 09:15:15
 description: Boost React performance with memoization, virtualization, and lazy loading.
 tags: [javascript, code, react, performance optimization, web development]
 ---
