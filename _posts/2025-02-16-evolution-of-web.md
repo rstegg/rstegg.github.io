@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "How to get started with web development in 2024?"
+title: "How to get started with web development in 2025?"
 date: 2025-02-16 09:02:05
-description: The Evolution of Web Development and Where to Begin in 2024
+description: The Evolution of Web Development and Where to Begin in 2025
 tags: [web development, web frameworks]
 ---
 
-## The Evolution of Web Development and Where to Begin in 2024
+## The Evolution of Web Development and Where to Begin in 2025
 
 In recent years, technologies like ChatGPT have revolutionized the way we work, making web application development more accessible than ever. However, while creating web applications has become easier, it still comes with unique challenges. The web wasn’t originally designed as an application platform—it was built for sharing documents. This means web developers must navigate constraints like limited bandwidth and performance optimization to deliver efficient and scalable applications.
 
-In this post, I’ll explore how we got to where we are today in web development and provide some guidance on how to get started in 2024. This post was inspired by a question I received after a recent lecture (see slides↗), and it’s tailored for beginners looking to step into the world of web development.
+In this post, I’ll explore how we got to where we are today in web development and provide some guidance on how to get started in 2025. This post was inspired by a question I received after a recent lecture (see slides↗), and it’s tailored for beginners looking to step into the world of web development.
 
 ## How Did We Arrive at Modern Web Applications?
 
@@ -59,6 +59,6 @@ AI-powered tools can accelerate your learning process by summarizing documentati
 
 ## Conclusion
 
-2024 is an exciting time to get into web development. The landscape is evolving, particularly with the increasing influence of AI on workflows and development practices. If you’re just starting out, begin with a project that excites you, then explore the technologies required to bring it to life. Your vision will naturally evolve as your skills grow, which is a normal part of the learning process.
+2025 is an exciting time to get into web development. The landscape is evolving, particularly with the increasing influence of AI on workflows and development practices. If you’re just starting out, begin with a project that excites you, then explore the technologies required to bring it to life. Your vision will naturally evolve as your skills grow, which is a normal part of the learning process.
 
 Above all, focus on understanding the foundations of web development. Mastering HTML, CSS, JavaScript, and the DOM will serve you well regardless of which frameworks come and go. While frameworks are valuable, they’re most effective when used in conjunction with a strong understanding of the core web technologies they build upon.
